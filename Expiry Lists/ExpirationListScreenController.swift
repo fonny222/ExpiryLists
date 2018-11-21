@@ -6,6 +6,10 @@
 //  Copyright © 2018 Fontana Technologies. All rights reserved.
 //
 
+/*
+ TODO: when i delete on one device it doesn't remove it from the table on another device
+ figure out how to referesh the table/array holding data on all devices in the app when it detects something was deleted.
+ */
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -17,12 +21,21 @@ class ExpirationListScreenController: UIViewController, UITableViewDelegate, UIT
     
     @IBOutlet weak var expirationListsTable: UITableView!
     
+    /* this is for when you eventually select the store I'll just use it
+     now so I'll have less to change later.
+     TODO: if I go with the store sytem i'll have to come up with a way to recall what store was chosen on log in
+     maybe store it locally? otherwise for now I'll just add the variable to each viewcontroller
+     */
+    var storeNumber = "6226"
     
     var ref:DatabaseReference?
     var handle:DatabaseHandle?
     
     var expirationListArray:[String] = []
     var exListIDArray:[String] = []
+    
+    //this is for deleting the node
+     var deletedListNodeID:[String] = []
     
     var selectedRow = -1
     
@@ -32,8 +45,10 @@ class ExpirationListScreenController: UIViewController, UITableViewDelegate, UIT
         // call a reference to the database when the view loads*****
         ref = Database.database().reference()
         
-       
-        handle = ref?.child("expiry-lists").child("expiration").observe(.childAdded, with: {(snapshot) in
+       // This does not load after I add an item from the AddExpirationItem.swift class I don't know why
+        //TODO: FIGURE THIS OUT!!!
+        //FIXED IT!  But I still don't know why it works now...
+        handle = ref?.child(storeNumber).child("expiry-lists").observe(.childAdded, with: {(snapshot) in
             if let item = snapshot.value as? [String : String]
             {
                 //use this methjod to retrieve what specific data I want
@@ -54,6 +69,38 @@ class ExpirationListScreenController: UIViewController, UITableViewDelegate, UIT
         })
        
         
+        /*
+         update: I FIGURED IT OUT!
+         snapshot returns what was deleted so I can use that to find out what needs to be removed in teh array!
+         */
+        
+        ref?.child(storeNumber).child("expiry-lists").observe(.childRemoved, with: {(snapshot)
+            in
+            
+           
+            
+             // this does nothing but add back what was deleted to the arrays...
+            if let item = snapshot.value as? [String : String]
+            {
+                
+                //use this methjod to retrieve what specific data I want
+                let text = item["name"]
+                let id = item["id"]
+                
+                // this adds it to the array that fills the table
+                // the removAll{} i found finds the string in teh array and removes it
+                self.expirationListArray.removeAll{$0 == text}
+                self.exListIDArray.removeAll{$0 == id}
+                
+                // print to see if anything going in the array
+                print("This is what is being deleted")
+                print(text)
+                print()
+            }
+            
+       self.expirationListsTable.reloadData()
+        })
+ 
     }
 
     
@@ -83,7 +130,7 @@ class ExpirationListScreenController: UIViewController, UITableViewDelegate, UIT
                  */
                 //self.ref?.child("expiry-lists").child("expiration").childByAutoId().setValue(list)
                 
-                let storeRef = self.ref?.child("expiry-lists").child("expiration").childByAutoId()
+                let storeRef = self.ref?.child(self.storeNumber).child("expiry-lists").childByAutoId()
                 
                 list["id"] = (storeRef?.key)!
                 
@@ -126,19 +173,17 @@ class ExpirationListScreenController: UIViewController, UITableViewDelegate, UIT
     // this should delete the row at the index path with a swipe delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
        
-        print()
-        print(expirationListArray[indexPath.row])
-        print()
         
-        
-        // this will delete the specific child because I'm using the id key
-        let childRef = self.ref?.child("expiry-lists").child("expiration").child(exListIDArray[indexPath.row])
+        // this will delete the specific child because I'm using the id key and it deletes just the list name
+        let childRef = self.ref?.child(storeNumber).child("expiry-lists").child(exListIDArray[indexPath.row])
         childRef?.removeValue { error, _ in
+            print()
             print("don't know what this is saying")
             print(error)
             print()
         }
         
+        loadDeletedChilds(listID: exListIDArray[indexPath.row])
         
         // this works to remove the row from the table
         expirationListArray.remove(at: indexPath.row)
@@ -149,8 +194,6 @@ class ExpirationListScreenController: UIViewController, UITableViewDelegate, UIT
         print()
         
         self.expirationListsTable.deleteRows(at: [indexPath], with: .fade)
-        
-        
         /*
          // this is to try to make a pop up before list is deleted need to figure it out still
         let alert = UIAlertController(title: "DELETE LIST!", message: "Are You Sure You Want To Delete This List??", preferredStyle: .alert)
@@ -168,8 +211,37 @@ class ExpirationListScreenController: UIViewController, UITableViewDelegate, UIT
         */
     }
     
-    
-    
+    // this loads all the nodes that have an id that matches the list ID and deletes them with a nested delete!
+    func loadDeletedChilds(listID:String){
+        /*This is my attempt at deleting the list name and the list childs
+         MY IDEA: grab the ids of the ones with the matching list and add them to an array, then
+         delete all the nodes with those ids somehow... maybe nest within this query if statement
+         don't forget to clear the array after delete
+         THIS WORKED I NESTED THEM!
+         */
+        let childRef2 = Database.database().reference().child(storeNumber).child("List-Data").queryOrdered(byChild: "list_id").queryEqual(toValue: listID)
+        
+        childRef2.observe(.childAdded, with: {(snapshot) in
+            if let item = snapshot.value as? [String : String]
+            {
+                let id = item["id"]
+                
+                self.deletedListNodeID.append(id!)
+                
+                
+                //lets see if we can nest this!
+                //  NESTED SUCCESSFULY!
+                let newRef = self.ref?.child(self.storeNumber).child("List-Data").child(id!)
+                newRef?.removeValue {error, _ in
+                    print()
+                    print("another error")
+                    print(error)
+                    print()
+                }
+                self.deletedListNodeID.removeAll()
+            }
+        })
+    }
     
     
     // MARK: - Navigation
