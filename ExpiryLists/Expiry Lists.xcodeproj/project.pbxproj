@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04166BE4211295A00035C683 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04166BE3211295A00035C683 /* GoogleService-Info.plist */; };
+		043E94B72129E61C0051CE9D /* AddExpirationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043E94B62129E61C0051CE9D /* AddExpirationItem.swift */; };
+		044597AE211293B7000DA43D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044597AD211293B7000DA43D /* AppDelegate.swift */; };
+		044597B0211293B7000DA43D /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044597AF211293B7000DA43D /* LogInController.swift */; };
+		044597B3211293B7000DA43D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044597B1211293B7000DA43D /* Main.storyboard */; };
+		044597B6211293B7000DA43D /* Expiry_Lists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 044597B4211293B7000DA43D /* Expiry_Lists.xcdatamodeld */; };
+		044597B8211293BE000DA43D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044597B7211293BE000DA43D /* Assets.xcassets */; };
+		044597BB211293BE000DA43D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044597B9211293BE000DA43D /* LaunchScreen.storyboard */; };
+		04495EA721ABC49400180C53 /* CustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04495EA621ABC49300180C53 /* CustomTableCell.xib */; };
+		04495EAB21ABC90200180C53 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04495EAA21ABC90200180C53 /* CustomCell.swift */; };
+		049962972112B4FC00E0E9E4 /* ExpirationListScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049962962112B4FC00E0E9E4 /* ExpirationListScreenController.swift */; };
+		049962992112B68E00E0E9E4 /* SkuListsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049962982112B68E00E0E9E4 /* SkuListsController.swift */; };
+		04A8D1542119F2B20004E230 /* ExListChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8D1532119F2B20004E230 /* ExListChoiceController.swift */; };
+		56E0191B6CD9C95C3B67CE5E /* Pods_Expiry_Lists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2F5AFE5637E580BEEBC4E3 /* Pods_Expiry_Lists.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04166BE3211295A00035C683 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		043E94B62129E61C0051CE9D /* AddExpirationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpirationItem.swift; sourceTree = "<group>"; };
+		044597AA211293B7000DA43D /* Expiry Lists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expiry Lists.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		044597AD211293B7000DA43D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		044597AF211293B7000DA43D /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		044597B2211293B7000DA43D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		044597B5211293B7000DA43D /* Expiry_Lists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Expiry_Lists.xcdatamodel; sourceTree = "<group>"; };
+		044597B7211293BE000DA43D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		044597BA211293BE000DA43D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		044597BC211293BE000DA43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04495EA621ABC49300180C53 /* CustomTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableCell.xib; sourceTree = "<group>"; };
+		04495EAA21ABC90200180C53 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		049962962112B4FC00E0E9E4 /* ExpirationListScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationListScreenController.swift; sourceTree = "<group>"; };
+		049962982112B68E00E0E9E4 /* SkuListsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SkuListsController.swift; path = Assets.xcassets/SkuListsController.swift; sourceTree = "<group>"; };
+		04A8D1532119F2B20004E230 /* ExListChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExListChoiceController.swift; sourceTree = "<group>"; };
+		4C2F5AFE5637E580BEEBC4E3 /* Pods_Expiry_Lists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expiry_Lists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BDE716E23E4ECA127958818 /* Pods-Expiry Lists.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expiry Lists.release.xcconfig"; path = "Pods/Target Support Files/Pods-Expiry Lists/Pods-Expiry Lists.release.xcconfig"; sourceTree = "<group>"; };
+		9EE0D14B32C6AFE0F3ADF7B8 /* Pods-Expiry Lists.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expiry Lists.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Expiry Lists/Pods-Expiry Lists.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		044597A7211293B7000DA43D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56E0191B6CD9C95C3B67CE5E /* Pods_Expiry_Lists.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		044597A1211293B7000DA43D = {
+			isa = PBXGroup;
+			children = (
+				044597AC211293B7000DA43D /* Expiry Lists */,
+				044597AB211293B7000DA43D /* Products */,
+				2776E4EAA69957B85ED107C3 /* Pods */,
+				B8F476864F1CD4C6D2C7FC9D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		044597AB211293B7000DA43D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				044597AA211293B7000DA43D /* Expiry Lists.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		044597AC211293B7000DA43D /* Expiry Lists */ = {
+			isa = PBXGroup;
+			children = (
+				044597AD211293B7000DA43D /* AppDelegate.swift */,
+				044597AF211293B7000DA43D /* LogInController.swift */,
+				049962962112B4FC00E0E9E4 /* ExpirationListScreenController.swift */,
+				04A8D1532119F2B20004E230 /* ExListChoiceController.swift */,
+				043E94B62129E61C0051CE9D /* AddExpirationItem.swift */,
+				044597B1211293B7000DA43D /* Main.storyboard */,
+				04495EAA21ABC90200180C53 /* CustomCell.swift */,
+				04495EA621ABC49300180C53 /* CustomTableCell.xib */,
+				049962982112B68E00E0E9E4 /* SkuListsController.swift */,
+				044597B7211293BE000DA43D /* Assets.xcassets */,
+				044597B9211293BE000DA43D /* LaunchScreen.storyboard */,
+				044597BC211293BE000DA43D /* Info.plist */,
+				044597B4211293B7000DA43D /* Expiry_Lists.xcdatamodeld */,
+				04166BE3211295A00035C683 /* GoogleService-Info.plist */,
+			);
+			path = "Expiry Lists";
+			sourceTree = "<group>";
+		};
+		2776E4EAA69957B85ED107C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EE0D14B32C6AFE0F3ADF7B8 /* Pods-Expiry Lists.debug.xcconfig */,
+				9BDE716E23E4ECA127958818 /* Pods-Expiry Lists.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8F476864F1CD4C6D2C7FC9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C2F5AFE5637E580BEEBC4E3 /* Pods_Expiry_Lists.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		044597A9211293B7000DA43D /* Expiry Lists */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 044597BF211293BE000DA43D /* Build configuration list for PBXNativeTarget "Expiry Lists" */;
+			buildPhases = (
+				DAED8D2C79CBE9E7F334E272 /* [CP] Check Pods Manifest.lock */,
+				044597A6211293B7000DA43D /* Sources */,
+				044597A7211293B7000DA43D /* Frameworks */,
+				044597A8211293B7000DA43D /* Resources */,
+				5AD624EBB11A704FC3C8DA96 /* [CP] Embed Pods Frameworks */,
+				CB0DBD019332D498099F9131 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Expiry Lists";
+			productName = "Expiry Lists";
+			productReference = 044597AA211293B7000DA43D /* Expiry Lists.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		044597A2211293B7000DA43D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Fontana Technologies";
+				TargetAttributes = {
+					044597A9211293B7000DA43D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 044597A5211293B7000DA43D /* Build configuration list for PBXProject "Expiry Lists" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 044597A1211293B7000DA43D;
+			productRefGroup = 044597AB211293B7000DA43D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				044597A9211293B7000DA43D /* Expiry Lists */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		044597A8211293B7000DA43D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044597BB211293BE000DA43D /* LaunchScreen.storyboard in Resources */,
+				04166BE4211295A00035C683 /* GoogleService-Info.plist in Resources */,
+				04495EA721ABC49400180C53 /* CustomTableCell.xib in Resources */,
+				044597B8211293BE000DA43D /* Assets.xcassets in Resources */,
+				044597B3211293B7000DA43D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AD624EBB11A704FC3C8DA96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Expiry Lists/Pods-Expiry Lists-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Expiry Lists/Pods-Expiry Lists-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB0DBD019332D498099F9131 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Expiry Lists/Pods-Expiry Lists-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAED8D2C79CBE9E7F334E272 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Expiry Lists-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		044597A6211293B7000DA43D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044597B0211293B7000DA43D /* LogInController.swift in Sources */,
+				044597AE211293B7000DA43D /* AppDelegate.swift in Sources */,
+				049962972112B4FC00E0E9E4 /* ExpirationListScreenController.swift in Sources */,
+				049962992112B68E00E0E9E4 /* SkuListsController.swift in Sources */,
+				044597B6211293B7000DA43D /* Expiry_Lists.xcdatamodeld in Sources */,
+				04A8D1542119F2B20004E230 /* ExListChoiceController.swift in Sources */,
+				04495EAB21ABC90200180C53 /* CustomCell.swift in Sources */,
+				043E94B72129E61C0051CE9D /* AddExpirationItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		044597B1211293B7000DA43D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044597B2211293B7000DA43D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		044597B9211293BE000DA43D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044597BA211293BE000DA43D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		044597BD211293BE000DA43D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		044597BE211293BE000DA43D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		044597C0211293BE000DA43D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EE0D14B32C6AFE0F3ADF7B8 /* Pods-Expiry Lists.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSF42SP4F8;
+				INFOPLIST_FILE = "Expiry Lists/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Fon-Tech.Expiry-Lists";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		044597C1211293BE000DA43D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BDE716E23E4ECA127958818 /* Pods-Expiry Lists.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSF42SP4F8;
+				INFOPLIST_FILE = "Expiry Lists/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Fon-Tech.Expiry-Lists";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		044597A5211293B7000DA43D /* Build configuration list for PBXProject "Expiry Lists" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044597BD211293BE000DA43D /* Debug */,
+				044597BE211293BE000DA43D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		044597BF211293BE000DA43D /* Build configuration list for PBXNativeTarget "Expiry Lists" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044597C0211293BE000DA43D /* Debug */,
+				044597C1211293BE000DA43D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		044597B4211293B7000DA43D /* Expiry_Lists.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				044597B5211293B7000DA43D /* Expiry_Lists.xcdatamodel */,
+			);
+			currentVersion = 044597B5211293B7000DA43D /* Expiry_Lists.xcdatamodel */;
+			path = Expiry_Lists.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 044597A2211293B7000DA43D /* Project object */;
+}
